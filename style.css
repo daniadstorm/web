@@ -1,0 +1,51 @@
+body{
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+#render{
+    overflow: hidden;
+    position: relative;
+    max-width: 900px;
+    max-height: 500px;
+}
+div.punto{
+    background-color: red;
+    width: 5px;
+    height: 5px;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+canvas{
+    border: 5px solid blue;
+    position: relative;
+    /* max-width: 1000px;
+    max-height: 500px;
+    height: 500px;
+    width: 1000px; */
+    box-sizing: border-box;
+}
+.btn-control{
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+#arriba{
+    background-image: url('img/arriba.png');
+    
+}
+#abajo{
+    background-image: url('img/abajo.png');
+}
+#izquierda{
+    background-image: url('img/izquierda.png');
+}
+#derecha{
+    background-image: url('img/derecha.png');
+}

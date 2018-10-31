@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kettal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/three.js"></script>
+    <script src="js/ColladaLoader.js"></script>
+    <script src="js/TrackballControls.js"></script>
+    <script src="js/kettal.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 text-center">
+                <h1>Controles</h1>
+                <div>
+                    <button id="arriba" class="btn-control"></button>
+                </div>
+                <div>
+                    <button id="izquierda" class="btn-control"></button>
+                    <button id="abajo" class="btn-control"></button>
+                    <button id="derecha" class="btn-control"></button>
+                </div>
+                <div>
+                    <button id="visible" class="btn-control w-100">Ocultar</button>
+                    <button id="eliminar" class="btn-control w-100">Eliminar</button>
+                    <button id="btnJson" class="btn-control w-100">Convertir Rotation a JSON</button>
+                    <button id="btnZoom" class="btn-control w-100">Desactivar Zoom</button>
+                    <button id="btnPan" class="btn-control w-100">Desactivar Pan</button>
+                    <button id="btnLoadSofa" class="btn-control w-100">Cargar sofa</button>
+                    <button id="btnResetControl" class="btn-control w-100">Reset controls</button>
+                    <div style="background-color:red;padding:5px;">
+                        <input id="txtMaxDistance" type="text" class="w-100" value="800">
+                        <button id="btnMaxDistance" class="w-100">Distancia maxima: Infinito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="render" class="mt-5">
+                    <div class="punto"></div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <h1>Hijos</h1>
+                <div id="hijos"></div>
+            </div>
+            <div class="col-md-2 text-center">
+                <h1>Opciones</h1>
+                <div id="opciones">
+                    <input id="picker" type="color" class="w-100">
+                    <hr>
+                    <button class="btn-control w-100" onclick="cambiarColor();">Agregar color</button>
+                    <button class="btn-control w-100" onclick="visibleInvisible();">Visible/Invisible</button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <pre>
+                    <p id="resultJSON"></p>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
