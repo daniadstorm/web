@@ -72,7 +72,7 @@ function start() {
     var element = document.getElementById('render');
     camara = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     camara.position.set(0, 0, 100);
-    control = new THREE.TrackballControls(camara, element);
+    control = new THREE.TrackballControls(camara, element); 
     control.addEventListener("change", renderizar);
     escena = new THREE.Scene();
     escena.name = "EscenaPadre";
